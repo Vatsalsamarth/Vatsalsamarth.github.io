@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samarth Vatsal — Portfolio</title>
+  <meta name="description" content="Portfolio of Samarth Vatsal — CSE student, developer, event organizer, air pistol shooter & duffer golfer." />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "sans-serif"],
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(255,255,255,0.08), 0 12px 40px -12px rgba(0,0,0,0.8)",
+          },
+          keyframes: {
+            floaty: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
+            fadeUp: { '0%': { opacity: 0, transform: 'translateY(16px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } }
+          },
+          animation: {
+            floaty: 'floaty 6s ease-in-out infinite',
+            fadeUp: 'fadeUp 700ms ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .reveal { opacity: 0; transform: translateY(16px); }
+    .reveal.revealed { opacity: 1; transform: translateY(0); transition: all .7s ease; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-gray-950/70 bg-gray-950/80 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="text-lg font-semibold tracking-tight">Samarth <span class="text-indigo-400">Vatsal</span></a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-white/90 text-white/70" href="#about">About</a>
+          <a class="hover:text-white/90 text-white/70" href="#skills">Skills</a>
+          <a class="hover:text-white/90 text-white/70" href="#projects">Projects</a>
+          <a class="hover:text-white/90 text-white/70" href="#achievements">Achievements</a>
+          <a class="hover:text-white/90 text-white/70" href="#contact">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" aria-label="Menu" class="p-2 rounded-xl border border-white/10 hover:bg-white/5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="grid gap-2 text-sm">
+          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#about">About</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#skills">Skills</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#projects">Projects</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#achievements">Achievements</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-white/5" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(60%_60%_at_50%_10%,black,transparent)]">
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] bg-gradient-to-b from-indigo-600/40 via-fuchsia-600/20 to-transparent blur-3xl"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-28">
+      <div class="grid md:grid-cols-2 items-center gap-10">
+        <div class="space-y-6 reveal">
+          <p class="text-sm tracking-wider uppercase text-white/60">Portfolio</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Samarth Vatsal</h1>
+          <p class="text-lg text-white/80">CSE Student • Developer • Event Organizer • 10m Air Pistol • Duffer Golfer</p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="https://www.linkedin.com/in/samarth-vatsal-626a531b1" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition shadow-glow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.135 1.447-2.135 2.944v5.662H9.005V9h3.112v1.561h.045c.434-.82 1.494-1.682 3.073-1.682 3.289 0 3.896 2.165 3.896 4.982v6.591zM5.337 7.433a1.804 1.804 0 110-3.608 1.804 1.804 0 010 3.608zM6.882 20.452H3.79V9h3.092v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 hover:bg-white/5 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 10.5l-9-6-9 6m18 0v7.125A2.625 2.625 0 0118.375 20.25H5.625A2.625 2.625 0 013 17.625V10.5m18 0L12 16.5 3 10.5"/></svg>
+              <span>Contact</span>
+            </a>
+            <a href="assets/Samarth_Vatsal_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 hover:bg-white/5 transition" download>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v12m0 0l3.5-3.5M12 15l-3.5-3.5M20 21H4"/></svg>
+              <span>Download Résumé</span>
+            </a>
+            <a href="Samarth_Vatsal_Resume.pdf" class="hidden">HiddenFallback</a>
+          </div>
+        </div>
+        <div class="relative reveal">
+          <div class="w-56 h-56 sm:w-64 sm:h-64 mx-auto rounded-3xl bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-purple-500 p-[3px] animate-floaty shadow-glow">
+            <div class="w-full h-full rounded-3xl bg-gray-950 overflow-hidden">
+              <img src="assets/profile.jpg" alt="Samarth Vatsal" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 hidden sm:block">
+            <div class="px-4 py-2 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+              <p class="text-xs text-white/70">Open to internships, collaborations & projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-3 gap-10 items-start">
+        <div class="md:col-span-1 reveal">
+          <h2 class="text-2xl font-bold">About Me</h2>
+          <p class="text-white/60 mt-2">Who I am & what I do</p>
+        </div>
+        <div class="md:col-span-2 space-y-4 text-white/80 leading-relaxed reveal">
+          <p>I'm a Computer Science and Engineering student at RNSIT, Bengaluru. I enjoy turning ideas into simple, usable software and I care about clean code and clarity.</p>
+          <p>I work mainly with Java, Python, and C/C++, and I like solving practical problems using DSA/OOP. On campus, I help organize events with GDSC and support peers through workshops and initiatives.</p>
+          <p>Sports keep me sharp: I'm a 10m air pistol shooter and a proud duffer golfer — competitive spirit included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 border-t border-white/5 bg-gradient-to-b from-gray-950 to-gray-900/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-6 mb-8 reveal">
+        <div>
+          <h2 class="text-2xl font-bold">Skills</h2>
+          <p class="text-white/60 mt-2">Tech, tools, and beyond</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="reveal">
+          <h3 class="font-semibold text-white/90">Technical</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">HTML</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">CSS</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Java</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Python</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">C</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">C++</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">R</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Data Structures & Algorithms</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 class="font-semibold text-white/90">Non‑Technical</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Event Organization (GDSC)</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Leadership</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Community Building</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">10m Air Pistol</span>
+            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-sm">Duffer Golfer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-6 mb-8 reveal">
+        <div>
+          <h2 class="text-2xl font-bold">Projects</h2>
+          <p class="text-white/60 mt-2">Selected work & initiatives</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Cards (no Maalde/FoundriZe) -->
+        <article class="p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] transition shadow-glow reveal">
+          <h3 class="font-semibold">Spring Boot CRUD Backend</h3>
+          <p class="text-sm text-white/70 mt-1">RESTful CRUD API with layered architecture, validation, and clear documentation for endpoints.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">Java</span>
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">Spring Boot</span>
+          </div>
+        </article>
+
+        <article class="p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] transition shadow-glow reveal">
+          <h3 class="font-semibold">DSA Implementations</h3>
+          <p class="text-sm text-white/70 mt-1">Dijkstra, Huffman coding, N‑Queens, subset sum (backtracking), decision trees, and branch & bound knapsack.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">Algorithms</span>
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">C/Java/Python</span>
+          </div>
+        </article>
+
+        <article class="p-5 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/[0.07] transition shadow-glow reveal">
+          <h3 class="font-semibold">GDSC Workshops</h3>
+          <p class="text-sm text-white/70 mt-1">Co‑organized open‑source & prep workshops (100+ signups); handled logistics, communications, and student support.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">Community</span>
+            <span class="text-xs px-2 py-1 rounded-lg bg-white/5 border border-white/10">Events</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="py-20 border-t border-white/5 bg-gradient-to-b from-gray-950 to-gray-900/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between gap-6 mb-8 reveal">
+        <div>
+          <h2 class="text-2xl font-bold">Achievements</h2>
+          <p class="text-white/60 mt-2">Highlights & milestones</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl border border-white/10 bg-white/5 reveal">
+          <p class="text-2xl font-extrabold">10m</p>
+          <p class="text-sm text-white/70 mt-1">Air pistol shooter — represented college</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-white/10 bg-white/5 reveal">
+          <p class="text-2xl font-extrabold">Golfer</p>
+          <p class="text-sm text-white/70 mt-1">Consistently performed as a duffer golfer</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-white/10 bg-white/5 reveal">
+          <p class="text-2xl font-extrabold">100+</p>
+          <p class="text-sm text-white/70 mt-1">Signups managed for GDSC workshops</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="reveal">
+          <h2 class="text-2xl font-bold">Get in touch</h2>
+          <p class="text-white/60 mt-2">Open to internships, collaborations, and early‑stage projects.</p>
+
+          <div class="mt-6 space-y-3 text-sm">
+            <p class="flex items-center gap-3 text-white/80">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.536 6.364l-1.414-1.414M7.05 7.05L5.636 5.636m12.728 0l-1.414 1.414M7.05 16.95l-1.414 1.414"/></svg>
+              Bengaluru, India
+            </p>
+            <a class="flex items-center gap-3 text-white/80 hover:text-white" href="mailto:samarthvatsal@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.09 1.934l-7.5 4.286a2.25 2.25 0 01-2.22 0L3.84 8.927A2.25 2.25 0 012.75 6.993V6.75"/></svg>
+              samarthvatsal@gmail.com
+            </a>
+            <a class="flex items-center gap-3 text-white/80 hover:text-white" href="https://www.linkedin.com/in/samarth-vatsal-626a531b1" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.135 1.447-2.135 2.944v5.662H9.005V9h3.112v1.561h.045c.434-.82 1.494-1.682 3.073-1.682 3.289 0 3.896 2.165 3.896 4.982v6.591zM5.337 7.433a1.804 1.804 0 110-3.608 1.804 1.804 0 010 3.608zM6.882 20.452H3.79V9h3.092v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a class="flex items-center gap-3 text-white/80 hover:text-white" href="https://github.com/Vatsalsamarth" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c-2.21 0-4 1.79-4 4 0 1.86 1.28 3.41 3 3.86V21l2-2 2 2V10.86c1.72-.45 3-2 3-3.86 0-2.21-1.79-4-4-4z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Netlify-enabled contact form -->
+        <form name="contact" method="POST" data-netlify="true" class="reveal p-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
+          <input type="hidden" name="form-name" value="contact" />
+          <label class="block text-sm text-white/80">Name</label>
+          <input name="name" type="text" placeholder="Your name" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <label class="block text-sm text-white/80 mt-4">Email</label>
+          <input name="email" type="email" placeholder="samarthvatsal@gmail.com" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+          <label class="block text-sm text-white/80 mt-4">Message</label>
+          <textarea name="message" rows="4" placeholder="Tell me about your project…" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          <button type="submit" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition w-full justify-center">
+            Send Message
+          </button>
+          <p class="text-[11px] text-white/50 mt-2">Form is Netlify-enabled. If you deploy on Netlify, submissions will appear in the site's Forms dashboard.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-white/5 text-center text-sm text-white/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p>© <span id="year">2025</span> Samarth Vatsal • Built with HTML + Tailwind</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Reveal on scroll (smooth fade + slide-in)
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add('revealed');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
