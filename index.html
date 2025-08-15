@@ -270,19 +270,21 @@
         </div>
 
         <!-- Netlify-enabled contact form -->
-        <form name="contact" method="POST" data-netlify="true" class="reveal p-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
-          <input type="hidden" name="form-name" value="contact" />
-          <label class="block text-sm text-white/80">Name</label>
-          <input name="name" type="text" placeholder="Your name" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-          <label class="block text-sm text-white/80 mt-4">Email</label>
-          <input name="email" type="email" placeholder="samarthvatsal@gmail.com" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-          <label class="block text-sm text-white/80 mt-4">Message</label>
-          <textarea name="message" rows="4" placeholder="Tell me about your project…" class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-          <button type="submit" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition w-full justify-center">
-            Send Message
-          </button>
-          <p class="text-[11px] text-white/50 mt-2">Form is Netlify-enabled. If you deploy on Netlify, submissions will appear in the site's Forms dashboard.</p>
-        </form>
+      <form action="https://formspree.io/f/mdkdjygb" method="POST" class="reveal p-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur">
+  <label class="block text-sm text-white/80">Name</label>
+  <input name="name" type="text" placeholder="Your name" required class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+  <label class="block text-sm text-white/80 mt-4">Email</label>
+  <input name="email" type="email" placeholder="samarthvatsal@gmail.com" required class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+  <label class="block text-sm text-white/80 mt-4">Message</label>
+  <textarea name="message" rows="4" placeholder="Tell me about your project…" required class="mt-1 w-full px-3 py-2 bg-gray-900/80 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+
+  <button type="submit" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 transition w-full justify-center">
+    Send Message
+  </button>
+  <p class="text-[11px] text-white/50 mt-2">Powered by Formspree</p>
+</form>
       </div>
     </div>
   </section>
