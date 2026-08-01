@@ -742,9 +742,7 @@ background:linear-gradient(
 
 .featured-project{
 
-display:grid;
-
-grid-template-columns:1.1fr .9fr;
+display:block;
 
 gap:60px;
 
@@ -781,30 +779,6 @@ border-color:var(--primary);
 box-shadow:0 25px 80px rgba(37,99,235,.18);
 
 }
-
-.featured-image{
-
-overflow:hidden;
-
-border-radius:22px;
-
-}
-
-.featured-image img{
-
-width:100%;
-
-display:block;
-
-border-radius:22px;
-
-transition:.5s;
-
-}
-
-.featured-image img:hover{
-
-transform:scale(1.04);
 
 }
 
@@ -916,7 +890,7 @@ background:var(--card);
 
 border-radius:24px;
 
-overflow:hidden;
+padding:30px;
 
 border:1px solid rgba(255,255,255,.06);
 
@@ -926,8 +900,11 @@ display:flex;
 
 flex-direction:column;
 
-}
+justify-content:space-between;
 
+min-height:320px;
+
+}
 .project-card:hover{
 
 transform:translateY(-10px);
@@ -935,24 +912,6 @@ transform:translateY(-10px);
 border-color:var(--primary);
 
 box-shadow:0 20px 60px rgba(0,0,0,.35);
-
-}
-
-.project-card img{
-
-width:100%;
-
-height:240px;
-
-object-fit:cover;
-
-transition:.5s;
-
-}
-
-.project-card:hover img{
-
-transform:scale(1.05);
 
 }
 
@@ -1017,13 +976,6 @@ color:white;
 /* =====================================================
                 PROJECT IMAGE EFFECT
 ===================================================== */
-
-.project-card img,
-.featured-image img{
-
-background:#111827;
-
-}
 
 .project-card::after{
 
