@@ -1516,3 +1516,90 @@ padding:24px;
 }
 
 }
+/* ==========================================
+        MOBILE NAVIGATION
+========================================== */
+
+.nav-links.mobile-active{
+
+display:flex;
+
+flex-direction:column;
+
+position:absolute;
+
+top:80px;
+
+left:5%;
+
+width:90%;
+
+background:#111827;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+gap:22px;
+
+animation:fadeMenu .35s;
+
+}
+
+@keyframes fadeMenu{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Active Navbar */
+
+.nav-links a.active{
+
+color:#60A5FA;
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#030712;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#2563EB;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#3B82F6;
+
+}
